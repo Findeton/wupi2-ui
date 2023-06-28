@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2023 Felix Robles <felix@wupi.io>
+# 
+# SPDX-License-Identifier: AGPL-3.0-only
+
+version: "3.6"
+services:
+  devcontainer:
+    image: ghcr.io/cachix/devenv:latest
+    volumes:
+      - ../:/workspace:cached
+    security_opt:
+      - label:disable
+volumes:
+  db_data:
