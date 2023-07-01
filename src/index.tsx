@@ -8,6 +8,7 @@ import App from "./App"
 import {ThemeProvider} from "@mui/material"
 import {theme} from "./services/theme"
 import "./services/i18n"
+import "./index.css"
 import i18n from "./services/i18n" // needs to be bundled
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
