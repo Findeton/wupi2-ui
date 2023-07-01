@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sequentech/ui-essentials.git"
+    "url": "git+https://github.com/Findeton/wupi2-ui.git"
   },
   "scripts": {
-    "build": "webpack --mode=production",
-    "build:dev": "webpack --mode=development",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "prettify": "prettier --check .",
     "prettify:fix": "prettier --write .",
     "lint": "eslint --ext js,jsx,ts,tsx,md,mdx .",
     "lint:fix": "eslint --fix --ext js,jsx,ts,tsx,md,mdx .",
-    "test": "jest",
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build -s public",
     "test-storybook": "storybook test",
@@ -117,11 +117,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "bugs": {
-    "url": "https://github.com/sequentech/ui-essentials/issues"
-  },
-  "readme": "ERROR: No README data found!",
-  "homepage": "https://github.com/sequentech/ui-essentials#readme",
-  "_id": "ui-essentials@0.1.0"
+  }
 }
