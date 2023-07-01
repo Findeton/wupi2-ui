@@ -6,6 +6,7 @@ import {TranslationType} from "./en"
 const spanishTranslation: TranslationType = {
     translations: {
         welcome: "Hola <br/> <strong>Mundo</strong>",
+        language: "Español",
     },
 }
 

@@ -6,6 +6,8 @@ import {styled} from "@mui/material/styles"
 import Stack from "@mui/material/Stack"
 import {Routes, Route} from "react-router-dom"
 import {HomeScreen} from "./screens/HomeScreen"
+import PageBanner from "./components/PageBanner/PageBanner"
+import Header from "./components/Header/Header"
 
 const StyledApp = styled(Stack)`
     min-height: 100vh;
@@ -14,9 +16,12 @@ const StyledApp = styled(Stack)`
 const App = () => {
     return (
         <StyledApp>
-            <Routes>
-                <Route path="/" element={<HomeScreen />} />
-            </Routes>
+            <Header />
+            <PageBanner marginBottom="auto">
+                <Routes>
+                    <Route path="/" element={<HomeScreen />} />
+                </Routes>
+            </PageBanner>
         </StyledApp>
     )
 }

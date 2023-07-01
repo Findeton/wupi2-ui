@@ -5,6 +5,7 @@
 const englishTranslation = {
     translations: {
         welcome: "Hello <br/> <strong>World</strong>",
+        language: "English",
     },
 }
 
