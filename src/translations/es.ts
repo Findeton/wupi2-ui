@@ -7,6 +7,15 @@ const spanishTranslation: TranslationType = {
     translations: {
         welcome: "Hola <br/> <strong>Mundo</strong>",
         language: "Español",
+        homeScreen: {
+            registerButton: "Registrarse ahora",
+        },
+        registerScreen: {
+            emailField: {
+                name: "Email",
+            },
+            applyButton: "Registrar cuenta",
+        },
     },
 }
 

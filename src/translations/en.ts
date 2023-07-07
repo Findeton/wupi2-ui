@@ -6,6 +6,15 @@ const englishTranslation = {
     translations: {
         welcome: "Hello <br/> <strong>World</strong>",
         language: "English",
+        homeScreen: {
+            registerButton: "Register now",
+        },
+        registerScreen: {
+            emailField: {
+                name: "Email",
+            },
+            applyButton: "Register account",
+        },
     },
 }
 

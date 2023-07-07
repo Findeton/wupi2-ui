@@ -8,6 +8,7 @@ import {Routes, Route} from "react-router-dom"
 import {HomeScreen} from "./screens/HomeScreen"
 import PageBanner from "./components/PageBanner/PageBanner"
 import Header from "./components/Header/Header"
+import {RegisterScreen} from "./screens/RegisterScreen"
 
 const StyledApp = styled(Stack)`
     min-height: 100vh;
@@ -20,6 +21,7 @@ const App = () => {
             <PageBanner marginBottom="auto">
                 <Routes>
                     <Route path="/" element={<HomeScreen />} />
+                    <Route path="/register" element={<RegisterScreen />} />
                 </Routes>
             </PageBanner>
         </StyledApp>
