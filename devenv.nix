@@ -7,8 +7,12 @@
   # https://devenv.sh/packages/
   packages = [
     pkgs.git
-    pkgs.postgresql
+    pkgs.ack
     pkgs.reuse
+    pkgs.nodePackages.npm
+    pkgs.nodejs
+    pkgs.yarn
+    pkgs.binaryen
 
     # To be able to use vim in the terminal
     pkgs.vim
@@ -23,11 +27,11 @@
   '';
 
   # https://devenv.sh/languages/
-  languages.typescript = {
+  /*languages.typescript = {
     enable = true;
     # https://devenv.sh/reference/options/#languagesrustversion
     version = "latest";
-  };
+  };*/
 
   # https://devenv.sh/pre-commit-hooks/
   pre-commit.hooks = {
