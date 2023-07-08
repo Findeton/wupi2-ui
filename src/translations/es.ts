@@ -14,6 +14,9 @@ const spanishTranslation: TranslationType = {
             emailField: {
                 name: "Email",
             },
+            passwordField: {
+                name: "Contraseña",
+            },
             applyButton: "Registrar cuenta",
         },
     },

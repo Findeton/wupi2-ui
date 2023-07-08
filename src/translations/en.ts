@@ -13,6 +13,9 @@ const englishTranslation = {
             emailField: {
                 name: "Email",
             },
+            passwordField: {
+                name: "Password",
+            },
             applyButton: "Register account",
         },
     },
