@@ -18,6 +18,21 @@ const spanishTranslation: TranslationType = {
                 name: "Contraseña",
             },
             applyButton: "Registrar cuenta",
+            errors: {
+                failedRegistration: "Registro Fallido",
+            },
+        },
+        loginScreen: {
+            emailField: {
+                name: "Email",
+            },
+            passwordField: {
+                name: "Contraseña",
+            },
+            applyButton: "Iniciar sesión",
+            errors: {
+                failedLogin: "Autenticación fallida",
+            },
         },
     },
 }

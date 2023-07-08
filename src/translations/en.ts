@@ -17,6 +17,21 @@ const englishTranslation = {
                 name: "Password",
             },
             applyButton: "Register account",
+            errors: {
+                failedRegistration: "Failed registration",
+            },
+        },
+        loginScreen: {
+            emailField: {
+                name: "Email",
+            },
+            passwordField: {
+                name: "Password",
+            },
+            applyButton: "Sign in",
+            errors: {
+                failedLogin: "Failed authentication",
+            },
         },
     },
 }

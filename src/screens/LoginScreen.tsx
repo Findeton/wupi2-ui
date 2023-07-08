@@ -5,21 +5,21 @@ import {Button, TextField} from "@mui/material"
 import React, {useState} from "react"
 import {useTranslation} from "react-i18next"
 import {useNavigate} from "react-router-dom"
-import {registerUser} from "../services/api"
 import {FieldContainer} from "../components/FieldContainer/FieldContainer"
+import {loginUser} from "../services/api"
 
-export const RegisterScreen: React.FC = () => {
+export const LoginScreen: React.FC = () => {
     const {t} = useTranslation("translations")
     const navigate = useNavigate()
     const [email, setEmail] = useState<string>("")
     const [password, setSetPassword] = useState<string>("")
     const [error, setError] = useState<boolean>(false)
 
-    const onRegister = () => {
-        registerUser(email, password)
+    const onLogin = () => {
+        loginUser(email, password)
             .then((response) => {
                 if (response.ok) {
-                    navigate("/login")
+                    navigate("/logged")
                 } else {
                     console.log(response)
                     setError(true)
@@ -30,7 +30,7 @@ export const RegisterScreen: React.FC = () => {
 
     return (
         <div>
-            <FieldContainer name="registerScreen.emailField.name">
+            <FieldContainer name="loginScreen.emailField.name">
                 <TextField
                     value={email}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,7 +38,7 @@ export const RegisterScreen: React.FC = () => {
                     }}
                 ></TextField>
             </FieldContainer>
-            <FieldContainer name="registerScreen.passwordField.name">
+            <FieldContainer name="loginScreen.passwordField.name">
                 <TextField
                     value={password}
                     type="password"
@@ -47,8 +47,8 @@ export const RegisterScreen: React.FC = () => {
                     }}
                 ></TextField>
             </FieldContainer>
-            <Button onClick={onRegister}>{t("registerScreen.applyButton")}</Button>
-            {error && <p>{t("registerScreen.errors.failedRegistration")}</p>}
+            <Button onClick={onLogin}>{t("loginScreen.applyButton")}</Button>
+            {error && <p>{t("loginScreen.errors.failedLogin")}</p>}
         </div>
     )
 }
