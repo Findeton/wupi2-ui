@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Findeton/wupi2-ui.git"
   },
+  "proxy": "http://localhost:8000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

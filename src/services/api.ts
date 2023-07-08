@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 
 export const registerUser = async (email: string, password: string) =>
-    fetch("http://localhost:8000/register", {
+    fetch("/users", {
         method: "POST",
         cache: "no-cache",
         headers: {
@@ -16,7 +16,7 @@ export const registerUser = async (email: string, password: string) =>
     })
 
 export const loginUser = async (email: string, password: string) =>
-    fetch("http://localhost:8000/login", {
+    fetch("/users/login", {
         method: "POST",
         cache: "no-cache",
         headers: {
