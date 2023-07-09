@@ -34,7 +34,7 @@ export const loginUser = async (email: string, password: string): Promise<string
 
 export const ping = async (authToken) =>
     fetch("/users/ping", {
-        method: "POST",
+        method: "GET",
         cache: "no-cache",
         headers: {
             Authorization: `Bearer ${authToken}`,
