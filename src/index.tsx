@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client"
 import {BrowserRouter} from "react-router-dom"
 import App from "./App"
 import {ThemeProvider} from "@mui/material"
+import {CookiesProvider} from "react-cookie"
 import {theme} from "./services/theme"
 import "./services/i18n"
 import "./index.css"
@@ -17,7 +18,9 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <ThemeProvider theme={theme}>
-                <App />
+                <CookiesProvider>
+                    <App />
+                </CookiesProvider>
             </ThemeProvider>
         </BrowserRouter>
     </React.StrictMode>

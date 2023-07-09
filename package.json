@@ -41,7 +41,8 @@
     "mui-image": "^1.0.7",
     "react-i18next": "^11.18.3",
     "react-router-dom": "^6.11.2",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "react-cookie": "4.1.1"
   },
   "peerDependencies": {
     "react": "^18.1.0",

@@ -25,7 +25,7 @@ const App = () => {
                     <Route path="/" element={<HomeScreen />} />
                     <Route path="/register" element={<RegisterScreen />} />
                     <Route path="/login" element={<LoginScreen />} />
-                    <Route path="/logged" element={<LoggedScreen />} />
+                    <Route path="/app" element={<LoggedScreen />} />
                 </Routes>
             </PageBanner>
         </StyledApp>

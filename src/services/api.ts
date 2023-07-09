@@ -15,8 +15,8 @@ export const registerUser = async (email: string, password: string) =>
         }),
     })
 
-export const loginUser = async (email: string, password: string) =>
-    fetch("/users/login", {
+export const loginUser = async (email: string, password: string): Promise<string> => {
+    const response = await fetch("/users/login", {
         method: "POST",
         cache: "no-cache",
         headers: {
@@ -27,3 +27,9 @@ export const loginUser = async (email: string, password: string) =>
             password,
         }),
     })
+    let authData = (await response.json()) as {auth_token: string}
+
+    return authData.auth_token
+}
+
+export const ping = async () => fetch("/ping")

@@ -7,6 +7,7 @@ import {useTranslation} from "react-i18next"
 import {useNavigate} from "react-router-dom"
 import {FieldContainer} from "../components/FieldContainer/FieldContainer"
 import {loginUser} from "../services/api"
+import {useCookies} from "react-cookie"
 
 export const LoginScreen: React.FC = () => {
     const {t} = useTranslation("translations")
@@ -14,18 +15,18 @@ export const LoginScreen: React.FC = () => {
     const [email, setEmail] = useState<string>("")
     const [password, setSetPassword] = useState<string>("")
     const [error, setError] = useState<boolean>(false)
+    const [cookies, setCookie] = useCookies(["auth_token"])
 
     const onLogin = () => {
         loginUser(email, password)
-            .then((response) => {
-                if (response.ok) {
-                    navigate("/logged")
-                } else {
-                    console.log(response)
-                    setError(true)
-                }
+            .then((authToken) => {
+                setCookie("auth_token", authToken)
+                navigate("/app")
             })
-            .catch()
+            .catch((error) => {
+                console.log(error)
+                setError(true)
+            })
     }
 
     return (
