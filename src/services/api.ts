@@ -16,7 +16,7 @@ export const registerUser = async (email: string, password: string) =>
     })
 
 export const loginUser = async (email: string, password: string): Promise<string> => {
-    const response = await fetch("/users/login", {
+    const response = await fetch("/users/authenticate", {
         method: "POST",
         cache: "no-cache",
         headers: {
