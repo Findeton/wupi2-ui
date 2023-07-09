@@ -33,7 +33,7 @@ export const loginUser = async (email: string, password: string): Promise<string
 }
 
 export const ping = async (authToken) =>
-    fetch("/ping", {
+    fetch("/users/ping", {
         method: "POST",
         cache: "no-cache",
         headers: {
